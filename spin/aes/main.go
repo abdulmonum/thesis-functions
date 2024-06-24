@@ -14,8 +14,6 @@ import (
 	"os"
 	"strconv"
 	"time"
-
-	spinhttp "github.com/fermyon/spin/sdk/go/v2/http"
 )
 
 func init() {

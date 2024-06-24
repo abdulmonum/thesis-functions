@@ -1,0 +1,17 @@
+spin_manifest_version = 2
+
+[application]
+authors = ["Abdul Monum <abdulmonum@gmail.com>"]
+description = "mardown2html application adopted from FaaSProfiler"
+name = "markdown2html"
+version = "0.1.0"
+
+[[trigger.http]]
+route = "/markdown2html"
+component = "markdown2html"
+
+[component.markdown2html]
+source = "app.wasm"
+[component.markdown2html.build]
+command = "componentize-py -w spin-http componentize app -o app.wasm"
+watch = ["*.py", "requirements.txt"]
